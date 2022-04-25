@@ -23,9 +23,12 @@ public class menu : MonoBehaviour
 
     public void PlayGame()
     {
+        SceneManager.LoadScene(3);
+    }
+    public void GameOver()
+    {
         SceneManager.LoadScene(2);
     }
-
     public void Credit()
     {
         SceneManager.LoadScene(1);

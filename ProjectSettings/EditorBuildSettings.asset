@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Antoine fait des trucs/credit.unity
     guid: a020bb76d04cb0b4f86c1f6a936f42e7
+  - enabled: 1
+    path: Assets/Scenes/Antoine fait des trucs/highscore.unity
+    guid: 20c8851d5db6ddf49ab41f5749fe40b0
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 4420abbffa71ac0478159dcfc22d06fe, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: cdd6e494cad749445bb58e029b4fd9a5, type: 2}
