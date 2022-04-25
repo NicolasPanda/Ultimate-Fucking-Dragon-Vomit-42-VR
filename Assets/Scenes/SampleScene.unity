@@ -1521,6 +1521,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1346522269}
   - component: {fileID: 1346522268}
+  - component: {fileID: 1346522270}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1561,6 +1562,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1346522270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346522267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cdf399c74498f9439553fd282e89377, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathCreator: {fileID: 1938469345}
+  endOfPathInstruction: 0
+  speed: 2
 --- !u!1 &1440217562
 GameObject:
   m_ObjectHideFlags: 0
@@ -1688,12 +1704,12 @@ MonoBehaviour:
       points:
       - {x: -15.631433, y: 0, z: 2.4107184}
       - {x: -13.893341, y: 0, z: 15.511757}
-      - {x: 9.46851, y: 0, z: 8.371363}
-      - {x: 10.246484, y: 0, z: 0.2938376}
-      - {x: 12.429011, y: 0, z: -22.366848}
+      - {x: 9.4307375, y: 0.029290259, z: 8.360803}
+      - {x: 10.208712, y: 0.029290259, z: 0.2832775}
+      - {x: 12.391239, y: 0.029290259, z: -22.377409}
       - {x: -17.365772, y: 0, z: -10.662039}
       isClosed: 1
-      space: 2
+      space: 0
       controlMode: 0
       autoControlLength: 0.3
       boundsUpToDate: 0
@@ -1701,8 +1717,8 @@ MonoBehaviour:
         m_Center: {x: -2.7549186, y: 3.1629524, z: -2.1238515}
         m_Extent: {x: 13.06617, y: 3.9862566, z: 3.1153376}
       perAnchorNormalsAngle:
-      - 0
-      - 0
+      - 70.73704
+      - 82.65939
       globalNormalsAngle: 0
       flipNormals: 0
     vertexPathUpToDate: 1
