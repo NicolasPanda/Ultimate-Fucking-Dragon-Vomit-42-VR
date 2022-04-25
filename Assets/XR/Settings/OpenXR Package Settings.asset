@@ -12,8 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a1f07dc5afe854f9f12a4194aca3fb, type: 3}
   m_Name: Android
   m_EditorClassIdentifier: 
-  features: []
-  m_renderMode: 1
+  features:
+  - {fileID: -3888519943395801533}
+  - {fileID: -6597739972987938061}
+  - {fileID: -2954824872815958828}
+  - {fileID: -8391508842805590500}
+  - {fileID: 1571074330703530499}
+  - {fileID: 8222427571938978911}
+  - {fileID: -729867753816984868}
+  m_renderMode: 0
   m_depthSubmissionMode: 0
 --- !u!114 &-8391508842805590500
 MonoBehaviour:
@@ -248,7 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ef793c31862a37448e907829482ef80, type: 3}
   m_Name: OculusQuestFeature Android
   m_EditorClassIdentifier: 
-  m_enabled: 0
+  m_enabled: 1
   nameUi: Oculus Quest Support
   version: 1.0.0
   featureIdInternal: com.unity.openxr.feature.oculusquest
@@ -348,7 +355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feeef8d85de8db242bdda70cc7ff5acd, type: 3}
   m_Name: OculusTouchControllerProfile Android
   m_EditorClassIdentifier: 
-  m_enabled: 0
+  m_enabled: 1
   nameUi: Oculus Touch Controller Profile
   version: 0.0.1
   featureIdInternal: com.unity.openxr.feature.input.oculustouch
