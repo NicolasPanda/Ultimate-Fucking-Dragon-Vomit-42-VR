@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 8744174380326016334}
   - component: {fileID: 9160543311416821455}
   - component: {fileID: 6888841104240474084}
-  m_Layer: 0
+  - component: {fileID: 2577605336602143402}
+  m_Layer: 6
   m_Name: TargetModel
-  m_TagString: Untagged
+  m_TagString: Target
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2577605336602143402
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6346349686276450641}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &8244671900540266215
 GameObject:
   m_ObjectHideFlags: 0
@@ -93,9 +108,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5786255947017400336}
   - component: {fileID: 1664995757213961103}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TargetLevel1
-  m_TagString: Untagged
+  m_TagString: Target
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
