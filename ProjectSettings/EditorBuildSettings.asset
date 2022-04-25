@@ -4,7 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Antoine fait des trucs/mainMenu.unity
+    guid: d159e8e01a720a249812bf0a8231d6ba
+  - enabled: 1
+    path: Assets/Scenes/Antoine fait des trucs/credit.unity
+    guid: a020bb76d04cb0b4f86c1f6a936f42e7
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 4420abbffa71ac0478159dcfc22d06fe, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: cdd6e494cad749445bb58e029b4fd9a5, type: 2}
