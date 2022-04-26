@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    public int laps = 0;
+
     private void Awake()
     {
         Instance = this;

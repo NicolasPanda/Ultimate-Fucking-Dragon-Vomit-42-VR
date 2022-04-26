@@ -1,66 +1,103 @@
 using System;
-using UnityEditor.ShaderGraph;
 using UnityEngine;
+using UnityTimer;
 
 public class TargetDamagable : MonoBehaviour, IEntity
 {
 
-    [SerializeField] private TargetState targetState;
+    [SerializeField] private Transform spawnPoint;
 
-    public bool isActive = false;
+    [SerializeField] private GameObject targetGreen;
+    [SerializeField] private GameObject targetYellow;
+    [SerializeField] private GameObject targetRed;
+
+    [SerializeField] private float targetTime;
+
+    private GameObject _currentTarget;
+
+    private TargetState _baseTargetState;
+
+    private Timer _targetTime;
+
+    public TargetState BaseTargetState  {
+        get => _baseTargetState;
+        set
+        {
+            _baseTargetState = value;
+            RenderTargetModel(value);
+        }
+    }
 
     private void Start()
     {
-        RenderTargetModel(TargetState.Hide);
+        _targetTime = Timer.Register(targetTime, TimeEnd);
     }
-    
-    
+
+
     public void DamageEntity()
     {
-        if (!isActive) return;
-        
-        switch (targetState)
+        switch (BaseTargetState)
         {
             case TargetState.Red:
                 //TODO : score
-                targetState = TargetState.Yellow;
-                RenderTargetModel(TargetState.Yellow);
+                BaseTargetState = TargetState.Yellow;
                 break;
             case TargetState.Yellow:
                 //TODO : score
-                targetState = TargetState.Green;
-                RenderTargetModel(TargetState.Green);
+                BaseTargetState = TargetState.Green;
                 break;
             case TargetState.Green:
                 //TODO : score
                 KillEntity();
-                break;
-            case TargetState.Hide:
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
         }
     }
 
-    public void ActivateTarget()
-    {
-        isActive = true;
-        RenderTargetModel(targetState);
-    }
-
     public void KillEntity()
     {
+        _targetTime.Cancel();
         Destroy(gameObject);
+    }
+
+    private void TimeEnd()
+    {
+        
     }
 
     private void RenderTargetModel(TargetState newState)
     {
-        
+        switch (newState)
+        {
+            case TargetState.Red:
+                if (_currentTarget != null)
+                {
+                    Destroy(_currentTarget);
+                }
+                _currentTarget = Instantiate(targetRed, spawnPoint);
+                break;
+            case TargetState.Yellow:
+                if (_currentTarget != null)
+                {
+                    Destroy(_currentTarget);
+                }
+                _currentTarget = Instantiate(targetYellow, spawnPoint);
+                break;
+            case TargetState.Green:
+                if (_currentTarget != null)
+                {
+                    Destroy(_currentTarget);
+                }
+                _currentTarget = Instantiate(targetGreen, spawnPoint);
+                break;
+            default:
+                throw new ArgumentOutOfRangeException(nameof(newState), newState, null);
+        }
     }
 }
 
-enum TargetState {
-    Hide,
+public enum TargetState {
     Red,
     Yellow,
     Green
