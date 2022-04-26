@@ -5,13 +5,13 @@ using UnityEngine.InputSystem;
 public class Shooting : MonoBehaviour
 {
     
-    [SerializeField] private PlayerInput playerInput;
+    [SerializeField] private InputActionReference shootInputActionReference;
     private InputAction _shootInput;
 
 
     private void Start()
     {
-        _shootInput = playerInput.currentActionMap.FindAction("Activate");
+        _shootInput = shootInputActionReference.action;
         _shootInput.started += ctx => Shoot();
     }
 
