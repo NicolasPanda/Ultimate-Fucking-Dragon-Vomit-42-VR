@@ -37,7 +37,7 @@ public class Shooting : MonoBehaviour
                 
         //For drawing line in the world space, provide the x,y,z values
         lineRenderer.SetPosition(0, transform.position); //x,y and z position of the starting point of the line
-        lineRenderer.SetPosition(1, transform.TransformDirection(transform.forward) * 500f); //x,y and z position of the end point of the line
+        lineRenderer.SetPosition(1, transform.position + (transform.forward * 500f)); //x,y and z position of the end point of the line
 
         foreach (var hit in hits)
         {
