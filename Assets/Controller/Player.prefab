@@ -107,7 +107,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7611168054404442006}
   - component: {fileID: 7611168054404441994}
-  - component: {fileID: 3641387116912534793}
   - component: {fileID: 4819403719126816076}
   m_Layer: 0
   m_Name: LeftHand Controller
@@ -298,36 +297,6 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 7779212132400271959, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ButtonPressPoint: 0.5
---- !u!114 &3641387116912534793
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7611168054404442007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: XRI LeftHand Interaction
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!114 &4819403719126816076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -340,7 +309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef03323cc955e3c4db5a44a6a5272394, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerInput: {fileID: 3641387116912534793}
+  playerInput: {fileID: 0}
 --- !u!1 &7611168054469328807
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,7 +320,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7611168054469328806}
   - component: {fileID: 7611168054469328794}
-  - component: {fileID: 1081002626263152097}
   - component: {fileID: 667005922752382709}
   m_Layer: 0
   m_Name: RightHand Controller
@@ -542,36 +510,6 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 875253871413052681, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ButtonPressPoint: 0.5
---- !u!114 &1081002626263152097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7611168054469328807}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: XRI RightHand Interaction
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!114 &667005922752382709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -584,7 +522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef03323cc955e3c4db5a44a6a5272394, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerInput: {fileID: 1081002626263152097}
+  playerInput: {fileID: 0}
 --- !u!1 &7611168055151375240
 GameObject:
   m_ObjectHideFlags: 0
@@ -991,8 +929,24 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6651409965242608621, guid: f794e0f65631c8e43a8447e6ae25c747, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6651409965242608621, guid: f794e0f65631c8e43a8447e6ae25c747, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6651409965242608621, guid: f794e0f65631c8e43a8447e6ae25c747, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6651409965242608621, guid: f794e0f65631c8e43a8447e6ae25c747, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6651409965242608621, guid: f794e0f65631c8e43a8447e6ae25c747, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 6651409965242608621, guid: f794e0f65631c8e43a8447e6ae25c747, type: 3}
       propertyPath: m_LocalRotation.y
