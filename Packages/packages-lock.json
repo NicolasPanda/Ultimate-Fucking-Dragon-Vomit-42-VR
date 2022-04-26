@@ -1,11 +1,10 @@
 {
   "dependencies": {
     "com.akbiggs.unitytimer": {
-      "version": "https://github.com/akbiggs/UnityTimer.git",
+      "version": "file:UnityTimer-master",
       "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "4554e279ae43277841948a98c97ed398a987fce3"
+      "source": "embedded",
+      "dependencies": {}
     },
     "com.unity.burst": {
       "version": "1.6.5",
