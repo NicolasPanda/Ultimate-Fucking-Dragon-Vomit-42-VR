@@ -33,11 +33,9 @@ public class Shooting : MonoBehaviour
         lineRenderer.positionCount = 2;
         Material whiteDiffuseMat = new Material(Shader.Find("Unlit/Texture"));
         lineRenderer.material = whiteDiffuseMat;
-        lineRenderer.useWorldSpace = true; 
-                
-        //For drawing line in the world space, provide the x,y,z values
-        lineRenderer.SetPosition(0, transform.position); //x,y and z position of the starting point of the line
-        lineRenderer.SetPosition(1, transform.position + (transform.forward * 500f)); //x,y and z position of the end point of the line
+        lineRenderer.useWorldSpace = true;
+        lineRenderer.SetPosition(0, transform.position);
+        lineRenderer.SetPosition(1, transform.position + (transform.forward * 500f));
 
         foreach (var hit in hits)
         {
