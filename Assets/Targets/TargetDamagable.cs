@@ -7,14 +7,18 @@ public class TargetDamagable : MonoBehaviour, IEntity
 
     [SerializeField] private TargetState targetState;
 
+    public bool isActive = false;
+
     private void Start()
     {
-        RenderTargetModel(targetState);
+        RenderTargetModel(TargetState.Hide);
     }
     
     
     public void DamageEntity()
     {
+        if (!isActive) return;
+        
         switch (targetState)
         {
             case TargetState.Red:
@@ -31,9 +35,17 @@ public class TargetDamagable : MonoBehaviour, IEntity
                 //TODO : score
                 KillEntity();
                 break;
+            case TargetState.Hide:
+                break;
             default:
                 throw new ArgumentOutOfRangeException();
         }
+    }
+
+    public void ActivateTarget()
+    {
+        isActive = true;
+        RenderTargetModel(targetState);
     }
 
     public void KillEntity()
@@ -48,6 +60,7 @@ public class TargetDamagable : MonoBehaviour, IEntity
 }
 
 enum TargetState {
+    Hide,
     Red,
     Yellow,
     Green
