@@ -28,6 +28,7 @@ public class Shooting : MonoBehaviour
             Debug.DrawRay(transform.position, transform.forward * 100f, Color.green);
         if (Physics.Raycast(transform.position, transform.forward, out hit, 100f))
         {
+            Debug.Log(hit);
             if (hit.transform.CompareTag("Target"))
             {
                 Debug.Log("tuch");
