@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5176460521494046460}
   m_Layer: 0
   m_Name: PF_Scout
-  m_TagString: Untagged
+  m_TagString: Target
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,8 +48,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pathCreator: {fileID: 0}
   endOfPathInstruction: 0
-  speed: 2
-  offsetToPlayer: 20
+  speed: 50
+  offsetToPlayer: 9.25
 --- !u!54 &1222944836532647053
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -77,5 +77,5 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 20
+  m_Radius: 54.65
   m_Center: {x: 0, y: 0, z: 0}
