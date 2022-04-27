@@ -8,13 +8,9 @@ namespace Menu.UI
     {
         [SerializeField] private TextMeshPro pointText;
 
-        private void Awake()
-        {
-            GameManager.instance.EventPointChange += HandlePointChange;
-        }
-
         private void Start()
         {
+            GameManager.instance.EventPointChange += HandlePointChange;
             pointText.text = GameManager.instance.Point.ToString();
         }
 

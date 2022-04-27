@@ -11,10 +11,7 @@ public class GameManager : MonoBehaviour
     public int Point
     {
         get => _point;
-        private set
-        {
-            _point = value;
-        }
+        private set => _point = value;
     } 
     
     public event Action<int> EventLapsChange;
