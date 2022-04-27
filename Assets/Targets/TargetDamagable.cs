@@ -99,6 +99,7 @@ public class TargetDamagable : MonoBehaviour, IEntity
 }
 
 public enum TargetState {
+    None,
     Red,
     Yellow,
     Green
