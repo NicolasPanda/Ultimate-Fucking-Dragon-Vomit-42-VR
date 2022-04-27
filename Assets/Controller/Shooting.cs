@@ -38,7 +38,7 @@ public class Shooting : MonoBehaviour
         lineRenderer.SetPosition(0, transform.position);
         lineRenderer.SetPosition(1, transform.position + (transform.forward * 500f));
 
-        Timer.Register(0.02f, () =>
+        Timer.Register(0.004f, () =>
         {
             Destroy(lineRenderer);
         });
