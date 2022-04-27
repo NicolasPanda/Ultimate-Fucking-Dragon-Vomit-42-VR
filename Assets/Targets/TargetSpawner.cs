@@ -11,10 +11,11 @@ public class TargetSpawner : MonoBehaviour
     
     void OnTriggerEnter(Collider hitInfo)
     {
-        var instance = Instantiate(PF_Taget, transform);
-        
-        var state = _entries[GameManager.Instance.laps];
-        
-        instance.gameObject.GetComponent<TargetDamagable>().BaseTargetState = state;
+        if (hitInfo.transform.CompareTag("Target"))
+        {
+            var instance = Instantiate(PF_Taget, transform);
+            var state = _entries[GameManager.Instance.laps];
+            instance.gameObject.GetComponent<TargetDamagable>().BaseTargetState = state;
+        }
     }
 }
