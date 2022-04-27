@@ -90,11 +90,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6030c91cf7b8f2644beeb04be8747645, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 0}
-  targetGreen: {fileID: 0}
-  targetYellow: {fileID: 0}
-  targetRed: {fileID: 0}
-  targetTime: 0
+  spawnPoint: {fileID: 1610470182010851682}
+  targetGreen: {fileID: 8330828608665510720, guid: 45204c28fde5c1f4e9bee8bfa48e3c14, type: 3}
+  targetYellow: {fileID: 8330828608665510720, guid: 9df0313c14c8a244097da7e4a9608f0d, type: 3}
+  targetRed: {fileID: 8330828608665510720, guid: 254e5bce5707c7249a26d57baf16e095, type: 3}
+  targetTime: 20
 --- !u!135 &6821847011319306357
 SphereCollider:
   m_ObjectHideFlags: 0

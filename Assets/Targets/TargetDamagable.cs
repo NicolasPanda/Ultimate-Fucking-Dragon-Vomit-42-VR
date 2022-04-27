@@ -63,7 +63,8 @@ public class TargetDamagable : MonoBehaviour, IEntity
 
     private void TimeEnd()
     {
-        
+        //TODO lose pv
+        KillEntity();
     }
 
     private void RenderTargetModel(TargetState newState)

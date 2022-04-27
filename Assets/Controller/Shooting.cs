@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityTimer;
 
 public class Shooting : MonoBehaviour
 {
@@ -36,6 +37,11 @@ public class Shooting : MonoBehaviour
         lineRenderer.useWorldSpace = true;
         lineRenderer.SetPosition(0, transform.position);
         lineRenderer.SetPosition(1, transform.position + (transform.forward * 500f));
+
+        Timer.Register(0.02f, () =>
+        {
+            Destroy(lineRenderer);
+        });
 
         foreach (var hit in hits)
         {

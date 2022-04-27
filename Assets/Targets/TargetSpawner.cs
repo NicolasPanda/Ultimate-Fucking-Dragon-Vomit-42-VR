@@ -11,7 +11,6 @@ public class TargetSpawner : MonoBehaviour
     
     void OnTriggerEnter(Collider hitInfo)
     {
-        Debug.Log("enter");
         var instance = Instantiate(PF_Taget, transform);
         
         var state = _entries[GameManager.Instance.laps];
