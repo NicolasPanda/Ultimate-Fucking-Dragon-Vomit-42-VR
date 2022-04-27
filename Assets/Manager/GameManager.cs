@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     public event Action<int> EventHealthChange;
-    private int _health = 0;
+    private int _health = 5;
     public int Health
     {
         get => _health;
