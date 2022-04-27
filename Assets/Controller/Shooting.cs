@@ -1,11 +1,13 @@
 using System;
+using MoreMountains.Feedbacks;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityTimer;
 
 public class Shooting : MonoBehaviour
 {
-    
+    [SerializeField] private MMF_Player shootFeedback;
+
     [SerializeField] private InputActionReference shootInputActionReference;
     private InputAction _shootInput;
 
@@ -19,10 +21,13 @@ public class Shooting : MonoBehaviour
     private void Shoot()
     {
         Debug.Log("shoot");
+        
+        shootFeedback.PlayFeedbacks();
+        
         var t = transform;
         Debug.DrawRay(t.position, t.forward * 500f, Color.green);
-        
-        
+
+
         var hits  = Physics.RaycastAll(transform.position, transform.forward, 500.0F);
 
         //For creating line renderer object
