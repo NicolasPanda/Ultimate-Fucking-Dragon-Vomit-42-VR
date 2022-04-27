@@ -8,6 +8,8 @@ public class Shooting : MonoBehaviour
 {
     [SerializeField] private MMF_Player shootFeedback;
 
+    [SerializeField] private Animator animator;
+
     [SerializeField] private InputActionReference shootInputActionReference;
     private InputAction _shootInput;
 
@@ -23,6 +25,8 @@ public class Shooting : MonoBehaviour
         Debug.Log("shoot");
         
         shootFeedback.PlayFeedbacks();
+        
+        animator.Play("A_GunShoot");
         
         var t = transform;
         Debug.DrawRay(t.position, t.forward * 500f, Color.green);
