@@ -20,6 +20,7 @@ namespace Menu.UI
 
         private void HandlePointChange(int value)
         {
+            Debug.Log("handle Change");
             pointText.text = value.ToString();
         }
     }

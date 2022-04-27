@@ -14,7 +14,6 @@ public class GameManager : MonoBehaviour
         private set
         {
             _point = value;
-            EventPointChange?.Invoke(value);
         }
     } 
     
@@ -37,6 +36,8 @@ public class GameManager : MonoBehaviour
 
     public void AddPoint(int value)
     {
+        Debug.Log("add point");
         Point += value;
+        EventPointChange?.Invoke(Point += value);
     }
 }
