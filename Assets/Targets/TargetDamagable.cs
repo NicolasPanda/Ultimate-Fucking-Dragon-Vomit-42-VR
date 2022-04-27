@@ -39,15 +39,15 @@ public class TargetDamagable : MonoBehaviour, IEntity
         switch (BaseTargetState)
         {
             case TargetState.Red:
-                //TODO : score
+                GameManager.instance.AddPoint(20);
                 BaseTargetState = TargetState.Yellow;
                 break;
             case TargetState.Yellow:
-                //TODO : score
+                GameManager.instance.AddPoint(20);
                 BaseTargetState = TargetState.Green;
                 break;
             case TargetState.Green:
-                //TODO : score
+                GameManager.instance.AddPoint(20);
                 KillEntity();
                 break;
             default:

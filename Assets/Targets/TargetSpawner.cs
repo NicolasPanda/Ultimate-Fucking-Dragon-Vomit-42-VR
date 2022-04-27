@@ -14,7 +14,7 @@ public class TargetSpawner : MonoBehaviour
         if (hitInfo.transform.CompareTag("Target"))
         {
             var instance = Instantiate(PF_Taget, transform);
-            var state = _entries[GameManager.Instance.laps];
+            var state = _entries[GameManager.instance.Laps];
             if (state != TargetState.None)
             {
                 instance.gameObject.GetComponent<TargetDamagable>().BaseTargetState = state;
