@@ -63,7 +63,7 @@ public class TargetDamagable : MonoBehaviour, IEntity
 
     private void TimeEnd()
     {
-        //TODO lose pv
+        GameManager.instance.DamagePlayer(1);
         KillEntity();
     }
 

@@ -5,6 +5,17 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    public event Action<int> EventHealthChange;
+    private int _health = 0;
+    public int Health
+    {
+        get => _health;
+        private set
+        {
+            _health = value;
+            EventHealthChange?.Invoke(value);
+        }
+    }
     
     public event Action<int> EventPointChange;
     private int _point = 0;
@@ -35,9 +46,26 @@ public class GameManager : MonoBehaviour
         instance = this;
     }
 
+    /// <summary>
+    /// Heal the player
+    /// </summary>
+    /// <param name="value">Value to add to the health</param>
+    public void AddHealth(int value)
+    {
+        Health += value;
+    }
+
+    /// <summary>
+    /// Damage player health
+    /// </summary>
+    /// <param name="value">Value to damage player health</param>
+    public void DamagePlayer(int value)
+    {
+        Health -= value;
+    }
+
     public void AddPoint(int value)
     {
-        Debug.Log("add point");
         Point += value;
     }
 }
