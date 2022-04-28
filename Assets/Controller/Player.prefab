@@ -278,7 +278,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 42c0fc899e3fe7249ad22c8bbb770a0f, type: 2}
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -608,6 +608,7 @@ MonoBehaviour:
   shootFeedback: {fileID: 1217968759}
   animator: {fileID: 4521777495217767794}
   shootInputActionReference: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  lineOffset: 5
 --- !u!114 &1217968759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -916,6 +917,7 @@ MonoBehaviour:
   shootFeedback: {fileID: 1217968758}
   animator: {fileID: 1141759355651411114}
   shootInputActionReference: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  lineOffset: 5
 --- !u!114 &1217968758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1466,6 +1468,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -6635519225210361111, guid: 720e5231f2177d547b2c9753222017af, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 89d707beb379bc743a8d66e480fb5355, type: 2}
     - target: {fileID: 919132149155446097, guid: 720e5231f2177d547b2c9753222017af, type: 3}
       propertyPath: m_Name
       value: Gun
@@ -1639,6 +1645,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -6635519225210361111, guid: 720e5231f2177d547b2c9753222017af, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 89d707beb379bc743a8d66e480fb5355, type: 2}
     - target: {fileID: 919132149155446097, guid: 720e5231f2177d547b2c9753222017af, type: 3}
       propertyPath: m_Name
       value: Gun
