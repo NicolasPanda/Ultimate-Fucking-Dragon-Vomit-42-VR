@@ -4,6 +4,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public event Action<int> EventDamagePlayer;
 
     public event Action<int> EventHealthChange;
     private int _health = 5;
@@ -62,6 +63,7 @@ public class GameManager : MonoBehaviour
     public void DamagePlayer(int value)
     {
         Health -= value;
+        EventDamagePlayer?.Invoke(value);
     }
 
     public void AddPoint(int value)
