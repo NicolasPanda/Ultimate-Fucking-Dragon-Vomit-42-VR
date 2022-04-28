@@ -11,6 +11,8 @@ public class Shooting : MonoBehaviour
     [SerializeField] private Animator animator;
 
     [SerializeField] private InputActionReference shootInputActionReference;
+
+    [SerializeField] private float lineOffset = 5;
     private InputAction _shootInput;
 
 
@@ -29,10 +31,12 @@ public class Shooting : MonoBehaviour
         animator.Play("A_GunShoot");
         
         var t = transform;
-        Debug.DrawRay(t.position, t.forward * 500f, Color.green);
+        var f = t.forward;
+        var p = t.position;
+        Debug.DrawRay(p, f * 500f, Color.green);
 
 
-        var hits  = Physics.RaycastAll(transform.position, transform.forward, 500.0F);
+        var hits  = Physics.RaycastAll(transform.position, f, 500.0F);
 
         //For creating line renderer object
         var lineRenderer = new GameObject("Line").AddComponent<LineRenderer>();
@@ -44,8 +48,8 @@ public class Shooting : MonoBehaviour
         Material whiteDiffuseMat = new Material(Shader.Find("Unlit/Texture"));
         lineRenderer.material = whiteDiffuseMat;
         lineRenderer.useWorldSpace = true;
-        lineRenderer.SetPosition(0, transform.position);
-        lineRenderer.SetPosition(1, transform.position + (transform.forward * 500f));
+        lineRenderer.SetPosition(0, p + (f * lineOffset));
+        lineRenderer.SetPosition(1, p + (f * 500f));
 
         Timer.Register(0.004f, () =>
         {
