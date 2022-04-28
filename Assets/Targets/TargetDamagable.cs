@@ -70,6 +70,7 @@ public class TargetDamagable : MonoBehaviour, IEntity
         _targetTime.Cancel();
         breakFeedback.PlayFeedbacks();
         _currentTarget.SetActive(false);
+        gameObject.GetComponent<SphereCollider>().enabled = false;
         Timer.Register(0.88f, () => Destroy(gameObject));
         
     }
