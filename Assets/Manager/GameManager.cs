@@ -5,6 +5,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public event Action<int> EventDamagePlayer;
+    public event Action<int> EventLapsAdd;
 
     public event Action<int> EventHealthChange;
     private int _health = 5;
@@ -35,7 +36,7 @@ public class GameManager : MonoBehaviour
     public int Laps
     {
         get => _laps;
-        set
+        private set
         {
             _laps = value;
             EventLapsChange?.Invoke(value);
@@ -69,5 +70,11 @@ public class GameManager : MonoBehaviour
     public void AddPoint(int value)
     {
         Point += value;
+    }
+
+    public void AddLaps()
+    {
+        Laps += 1;
+        EventLapsAdd?.Invoke(Laps);
     }
 }
