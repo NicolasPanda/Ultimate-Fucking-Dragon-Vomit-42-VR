@@ -1,24 +1,17 @@
 using System;
-using MoreMountains.Feedbacks;
 using UnityEngine;
 using UnityTimer;
 
 public class TargetDamagable : MonoBehaviour, IEntity
 {
 
-    [Header("Base")]
     [SerializeField] private Transform spawnPoint;
 
     [SerializeField] private GameObject targetGreen;
     [SerializeField] private GameObject targetYellow;
     [SerializeField] private GameObject targetRed;
-    
-    [SerializeField] private float targetTime;
-    
-    [Header("Sound")]
-    [SerializeField] private MMF_Player TargetBreakFeedBack;
-    [SerializeField] private MMF_Player TargetSpawnFeedBack;
 
+    [SerializeField] private float targetTime;
 
     private GameObject _currentTarget;
 
@@ -37,7 +30,6 @@ public class TargetDamagable : MonoBehaviour, IEntity
 
     private void Start()
     {
-        TargetSpawnFeedBack.PlayFeedbacks();
         _targetTime = Timer.Register(targetTime, TimeEnd);
     }
 
@@ -48,17 +40,14 @@ public class TargetDamagable : MonoBehaviour, IEntity
         {
             case TargetState.Red:
                 GameManager.instance.AddPoint(20);
-                TargetBreakFeedBack.PlayFeedbacks();
                 BaseTargetState = TargetState.Yellow;
                 break;
             case TargetState.Yellow:
                 GameManager.instance.AddPoint(20);
-                TargetBreakFeedBack.PlayFeedbacks();
                 BaseTargetState = TargetState.Green;
                 break;
             case TargetState.Green:
                 GameManager.instance.AddPoint(20);
-                TargetBreakFeedBack.PlayFeedbacks();
                 KillEntity();
                 break;
             default:
