@@ -6,14 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Antoine fait des trucs/mainMenu.unity
-    guid: d159e8e01a720a249812bf0a8231d6ba
+    path: Assets/Scenes/Menu.unity
+    guid: 7446673529b35924f87e0f18e8f0d853
   - enabled: 1
-    path: Assets/Scenes/Antoine fait des trucs/credit.unity
-    guid: a020bb76d04cb0b4f86c1f6a936f42e7
-  - enabled: 1
-    path: Assets/Scenes/Antoine fait des trucs/highscore.unity
-    guid: 20c8851d5db6ddf49ab41f5749fe40b0
+    path: Assets/Scenes/LDV2.unity
+    guid: b58ad2f91b230dd45ab425528af001e9
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 4420abbffa71ac0478159dcfc22d06fe, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: cdd6e494cad749445bb58e029b4fd9a5, type: 2}
