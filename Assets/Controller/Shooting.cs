@@ -14,6 +14,7 @@ public class Shooting : MonoBehaviour
 
     [SerializeField] private float lineOffset = 5;
     private InputAction _shootInput;
+    private static readonly int ShootIndex = Animator.StringToHash("Shoot");
 
 
     private void Start()
@@ -28,7 +29,7 @@ public class Shooting : MonoBehaviour
         
         shootFeedback.PlayFeedbacks();
         
-        animator.Play("A_GunShoot");
+        animator.SetBool(ShootIndex, true);
         
         var t = transform;
         var f = t.forward;
@@ -53,7 +54,8 @@ public class Shooting : MonoBehaviour
 
         Timer.Register(0.004f, () =>
         {
-            Destroy(lineRenderer);
+            Destroy(lineRenderer.gameObject);
+            animator.SetBool(ShootIndex, false);
         });
 
         foreach (var hit in hits)
