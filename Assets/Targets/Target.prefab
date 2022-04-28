@@ -484,8 +484,8 @@ MonoBehaviour:
         Mode: 0
         RandomSfx:
         - {fileID: 8300000, guid: b6075d5d99120754ab61e567d7288482, type: 3}
-        MinVolume: 1
-        MaxVolume: 1
-        MinPitch: 0.8
+        MinVolume: 0.75
+        MaxVolume: 0.75
+        MinPitch: 1
         MaxPitch: 1
         SfxAudioMixerGroup: {fileID: 0}
