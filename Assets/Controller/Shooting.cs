@@ -13,6 +13,8 @@ public class Shooting : MonoBehaviour
     [SerializeField] private InputActionReference shootInputActionReference;
 
     [SerializeField] private float lineOffset = 5;
+    [SerializeField] private float lineWidth = 0.01f;
+    [SerializeField] private Color lineColor = Color.cyan;
     private InputAction _shootInput;
     private static readonly int ShootIndex = Animator.StringToHash("Shoot");
 
@@ -41,10 +43,10 @@ public class Shooting : MonoBehaviour
 
         //For creating line renderer object
         var lineRenderer = new GameObject("Line").AddComponent<LineRenderer>();
-        lineRenderer.startColor = Color.white;
-        lineRenderer.endColor = Color.white;
-        lineRenderer.startWidth = 0.01f;
-        lineRenderer.endWidth = 0.01f;
+        lineRenderer.startColor = lineColor;
+        lineRenderer.endColor = lineColor;
+        lineRenderer.startWidth = lineWidth;
+        lineRenderer.endWidth = lineWidth;
         lineRenderer.positionCount = 2;
         Material whiteDiffuseMat = new Material(Shader.Find("Unlit/Texture"));
         lineRenderer.material = whiteDiffuseMat;
