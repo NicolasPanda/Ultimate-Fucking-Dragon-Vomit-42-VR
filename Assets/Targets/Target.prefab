@@ -253,9 +253,9 @@ MonoBehaviour:
   targetGreen: {fileID: 8330828608665510720, guid: 45204c28fde5c1f4e9bee8bfa48e3c14, type: 3}
   targetYellow: {fileID: 8330828608665510720, guid: d7c5f1b75309a17408cfba2f27d29809, type: 3}
   targetRed: {fileID: 8330828608665510720, guid: 254e5bce5707c7249a26d57baf16e095, type: 3}
-  targetTime: 0.5
-  BreakFeedback: {fileID: 1462350397732880771}
-  SpawnFeedback: {fileID: 3453819214121331592}
+  targetTime: 15
+  breakFeedback: {fileID: 1462350397732880771}
+  spawnFeedback: {fileID: 3453819214121331592}
 --- !u!135 &6821847011319306357
 SphereCollider:
   m_ObjectHideFlags: 0
