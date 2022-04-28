@@ -29,7 +29,7 @@ public class Shooting : MonoBehaviour
         
         shootFeedback.PlayFeedbacks();
         
-        animator.Play("A_GunShoot");
+        animator.Play("A_GunShoot", -1, 0);
         
         var t = transform;
         var f = t.forward;
