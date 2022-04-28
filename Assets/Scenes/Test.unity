@@ -306,6 +306,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -5.01
       objectReference: {fileID: 0}
+    - target: {fileID: 1492948365, guid: 9407cd8e76e30e8458e04649eabf251b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 1141759355651411114, guid: 9407cd8e76e30e8458e04649eabf251b, type: 3}
       propertyPath: m_Avatar
       value: 
@@ -556,6 +560,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1990548641 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7611168055538897506, guid: 9407cd8e76e30e8458e04649eabf251b, type: 3}
+  m_PrefabInstance: {fileID: 700177745}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1990548646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990548641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cdf5449f25b0184d8aa3649b2e241ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6973366198945945746
 PrefabInstance:
   m_ObjectHideFlags: 0
