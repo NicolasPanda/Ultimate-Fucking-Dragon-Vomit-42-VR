@@ -48,8 +48,10 @@ public class Shooting : MonoBehaviour
         lineRenderer.startWidth = lineWidth;
         lineRenderer.endWidth = lineWidth;
         lineRenderer.positionCount = 2;
-        Material whiteDiffuseMat = new Material(Shader.Find("Unlit/Texture"));
-        whiteDiffuseMat.color = lineColor;
+        Material whiteDiffuseMat = new Material(Shader.Find("Unlit/Texture"))
+        {
+            color = lineColor
+        };
         lineRenderer.material = whiteDiffuseMat;
         lineRenderer.useWorldSpace = true;
         lineRenderer.SetPosition(0, p + (f * lineOffset));
