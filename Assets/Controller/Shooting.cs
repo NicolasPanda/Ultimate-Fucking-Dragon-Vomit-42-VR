@@ -29,7 +29,7 @@ public class Shooting : MonoBehaviour
         
         shootFeedback.PlayFeedbacks();
         
-        animator.SetBool(ShootIndex, true);
+        animator.Play("A_GunShoot");
         
         var t = transform;
         var f = t.forward;
@@ -55,7 +55,6 @@ public class Shooting : MonoBehaviour
         Timer.Register(0.004f, () =>
         {
             Destroy(lineRenderer.gameObject);
-            animator.SetBool(ShootIndex, false);
         });
 
         foreach (var hit in hits)
