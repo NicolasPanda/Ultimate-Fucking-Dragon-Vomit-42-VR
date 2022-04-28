@@ -58,7 +58,6 @@ public class TargetDamagable : MonoBehaviour, IEntity
                 break;
             case TargetState.Green:
                 GameManager.instance.AddPoint(20);
-                breakFeedback.PlayFeedbacks();
                 KillEntity();
                 break;
             default:
@@ -69,7 +68,10 @@ public class TargetDamagable : MonoBehaviour, IEntity
     public void KillEntity()
     {
         _targetTime.Cancel();
-        Destroy(gameObject);
+        breakFeedback.PlayFeedbacks();
+        _currentTarget.SetActive(false);
+        Timer.Register(0.88f, () => Destroy(gameObject));
+        
     }
 
     private void TimeEnd()

@@ -483,7 +483,7 @@ MonoBehaviour:
         TargetAudioSource: {fileID: 4309470065763763618}
         Mode: 0
         RandomSfx:
-        - {fileID: 8300000, guid: 0ef19b9a3c826434b9bbfb792a25d128, type: 3}
+        - {fileID: 8300000, guid: b6075d5d99120754ab61e567d7288482, type: 3}
         MinVolume: 1
         MaxVolume: 1
         MinPitch: 0.8
