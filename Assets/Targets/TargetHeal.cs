@@ -1,8 +1,10 @@
+using MoreMountains.Feedbacks;
 using UnityEngine;
 
 public class TargetHeal : MonoBehaviour, IEntity
 {
     [SerializeField] private GameObject renderTarget;
+    [SerializeField] private MMF_Player SoundFeedBack;
     private bool _isActive = true;
     
     void Start()
@@ -22,6 +24,7 @@ public class TargetHeal : MonoBehaviour, IEntity
     
     public void DamageEntity()
     {
+        SoundFeedBack.PlayFeedbacks();
         _isActive = false;
         gameObject.GetComponent<SphereCollider>().enabled = false;
         renderTarget.SetActive(false);

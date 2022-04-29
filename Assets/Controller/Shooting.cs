@@ -29,8 +29,6 @@ public class Shooting : MonoBehaviour
 
     private void Shoot()
     {
-        Debug.Log("shoot");
-        
         shootFeedback.PlayFeedbacks();
         flash.Play();
         
@@ -65,7 +63,6 @@ public class Shooting : MonoBehaviour
 
         foreach (var hit in hits)
         {
-            Debug.Log(hit.transform.name);
             var entity = (IEntity) hit.collider.gameObject.GetComponent<IEntity>();
             if (entity != null)
             {
