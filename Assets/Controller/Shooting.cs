@@ -2,11 +2,13 @@ using System;
 using MoreMountains.Feedbacks;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.VFX;
 using UnityTimer;
 
 public class Shooting : MonoBehaviour
 {
     [SerializeField] private MMF_Player shootFeedback;
+    [SerializeField] private VisualEffect flash;
 
     [SerializeField] private Animator animator;
 
@@ -30,6 +32,7 @@ public class Shooting : MonoBehaviour
         Debug.Log("shoot");
         
         shootFeedback.PlayFeedbacks();
+        flash.Play();
         
         animator.Play("A_GunShoot", -1, 0);
         
