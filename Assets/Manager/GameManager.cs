@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,6 +15,10 @@ public class GameManager : MonoBehaviour
         get => _health;
         private set
         {
+            if (value == 0)
+            {
+                PlayerDead();
+            }
             _health = value;
             EventHealthChange?.Invoke(value);
         }
@@ -76,5 +81,10 @@ public class GameManager : MonoBehaviour
     {
         Laps += 1;
         EventLapsAdd?.Invoke(Laps);
+    }
+
+    public void PlayerDead()
+    {
+        SceneManager.LoadScene(2);
     }
 }
