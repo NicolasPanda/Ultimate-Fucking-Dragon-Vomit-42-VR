@@ -83,7 +83,7 @@ public class GameManager : MonoBehaviour
         EventLapsAdd?.Invoke(Laps);
     }
 
-    public void PlayerDead()
+    private void PlayerDead()
     {
         SceneManager.LoadScene(2);
     }
