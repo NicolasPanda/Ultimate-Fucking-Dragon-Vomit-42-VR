@@ -43,6 +43,10 @@ public class GameManager : MonoBehaviour
         get => _laps;
         private set
         {
+            if (value == 5)
+            {
+                SceneManager.LoadScene(0);
+            }
             _laps = value;
             EventLapsChange?.Invoke(value);
         }
